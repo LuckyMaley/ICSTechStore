@@ -1,4 +1,4 @@
-This a TechStore POS system developed on vb.net programming language. The system uses a Access local db that is stored within the project called ICSTechStore.db
+This a TechStore POS system developed on vb.net programming language. The system uses a Access local db that is stored within the ICSTechStore project folder called [ICSTechStore.mdb](/ICSTechStore/ICSTechStore.mdb)
 
 
 Demonstration video below:
