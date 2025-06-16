@@ -19,6 +19,7 @@ jobs:
     - name: Setup .NET Framework Developer Pack
       run: |
         choco install netfx-4.8-devpack -y
+        choco install netfx-3.5-devpack -y
     - name: Restore dependencies
       run: dotnet restore ./ICSTechStore/ICSTechStore.vbproj
     - name: Build
