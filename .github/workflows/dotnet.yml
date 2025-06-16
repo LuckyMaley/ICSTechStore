@@ -16,10 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Setup .NET Framework Developer Pack
+    - name: Enable .NET Framework 3.5
       run: |
-        choco install netfx-4.8-devpack -y
-        choco install netfx-3.5-devpack -y
+        DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
     - name: Restore dependencies
       run: dotnet restore ./ICSTechStore/ICSTechStore.vbproj
     - name: Build
