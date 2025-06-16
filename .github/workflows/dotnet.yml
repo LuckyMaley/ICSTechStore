@@ -19,6 +19,13 @@ jobs:
     - name: Enable .NET Framework 3.5
       run: |
         DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
+    - name: Install .NET Framework 3.5 Developer Pack
+      run: |
+        choco install netfx-3.5-devpack --no-progress
+      shell: pwsh
+    
+    - name: Build
+      run: dotnet build ./ICSTechStore/ICSTechStore.vbproj --no-restore
     - name: Restore dependencies
       run: dotnet restore ./ICSTechStore/ICSTechStore.vbproj
     - name: Build
